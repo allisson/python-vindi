@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest
+pytest-cov
+vcrpy
+coveralls
+Sphinx
+twine
+wheel
