@@ -1,0 +1,29 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.13.0]
+    method: GET
+    uri: https://app.vindi.com.br/api/v1/customers/2481112
+  response:
+    body: {string: '{"customer":{"id":2481112,"name":"John Doe","email":"john@doe.com","registry_code":null,"code":null,"notes":null,"status":"inactive","created_at":"2017-04-19T13:08:51.000-03:00","updated_at":"2017-04-19T13:08:51.000-03:00","metadata":{},"address":{"street":null,"number":null,"additional_details":null,"zipcode":null,"neighborhood":null,"city":null,"state":null,"country":null},"phones":[]}}'}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['391']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Wed, 19 Apr 2017 16:19:50 GMT']
+      ETag: [W/"702a3fd627b8e925848e29315fa67d72"]
+      Rate-Limit-Limit: ['120']
+      Rate-Limit-Remaining: ['119']
+      Rate-Limit-Reset: ['1492618849']
+      Server: [nginx]
+      Vindi-Merchant-Id: ['5963']
+      X-Request-Id: [72f86328-e3ee-4921-bc69-c549c2d4f6be]
+      X-Runtime: ['0.024208']
+    status: {code: 200, message: OK}
+version: 1
