@@ -6,7 +6,7 @@ engines:
       languages:
       - python
     checks:
-      Similar Code:
+      Similar code:
         enabled: false
   fixme:
     enabled: true
