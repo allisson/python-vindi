@@ -1,0 +1,30 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.13.0]
+    method: GET
+    uri: https://app.vindi.com.br/api/v1/products/82534
+  response:
+    body: {string: '{"product":{"id":82534,"name":"Product One","code":"product-one","unit":null,"status":"active","description":null,"invoice":"always","created_at":"2017-04-20T08:27:28.000-03:00","updated_at":"2017-04-20T08:27:28.000-03:00","pricing_schema":{"id":1196727,"short_format":"R$
+        100,00","price":"100.0","minimum_price":null,"schema_type":"flat","pricing_ranges":[],"created_at":"2017-04-20T08:27:28.000-03:00"},"metadata":{}}}'}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['420']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Thu, 20 Apr 2017 11:31:59 GMT']
+      ETag: [W/"db4eec832a8b6a04b736dbe3ae08c8f3"]
+      Rate-Limit-Limit: ['120']
+      Rate-Limit-Remaining: ['119']
+      Rate-Limit-Reset: ['1492687979']
+      Server: [nginx]
+      Vindi-Merchant-Id: ['5963']
+      X-Request-Id: [c5568165-7bfb-4c33-9771-2c2e2b22106e]
+      X-Runtime: ['0.023803']
+    status: {code: 200, message: OK}
+version: 1

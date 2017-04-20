@@ -37,3 +37,39 @@ def customer_data():
             'phones': []
         }
     }
+
+
+@pytest.fixture
+def product_data():
+    return {
+        'product': {
+            'id': 82534,
+            'name': 'Product One',
+            'code': 'product-one',
+            'unit': None,
+            'status': 'active',
+            'description': None,
+            'invoice': 'always',
+            'created_at': '2017-04-20T08:27:28.000-03:00',
+            'updated_at': '2017-04-20T08:27:28.000-03:00',
+            'pricing_schema': {
+                'id': 1196727,
+                'short_format': 'R$ 100,00',
+                'price': '100.0',
+                'minimum_price': None,
+                'schema_type': 'flat',
+                'pricing_ranges': [],
+                'created_at': '2017-04-20T08:27:28.000-03:00'
+            },
+            'metadata': {}
+        }
+    }
+
+
+@pytest.fixture
+def payment_method_data():
+    return {
+        'payment_method': {
+            'id': 17293
+        }
+    }
