@@ -104,3 +104,40 @@ def test_payment_methods_retrieve(api, payment_method_data):
     response = api.payment_methods.retrieve(payment_method_data['payment_method']['id'])
     assert response.status_code == status.HTTP_200_OK
     assert response.body['payment_method']['id'] == payment_method_data['payment_method']['id']
+
+
+@vcr.use_cassette()
+def test_payment_profiles_create(api, payment_profile_data):
+    body = payment_profile_data
+    response = api.payment_profiles.create(body=body)
+    assert response.status_code == status.HTTP_201_CREATED
+    assert response.body['payment_profile']['id'] == payment_profile_data['id']
+
+
+@vcr.use_cassette()
+def test_payment_profiles_list(api):
+    response = api.payment_profiles.list()
+    assert response.status_code == status.HTTP_200_OK
+    assert 'payment_profiles' in response.body
+
+
+@vcr.use_cassette()
+def test_payment_profiles_retrieve(api, payment_profile_data):
+    response = api.payment_profiles.retrieve(payment_profile_data['id'])
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['payment_profile']['id'] == payment_profile_data['id']
+
+
+@vcr.use_cassette()
+def test_payment_profiles_verify(api, payment_profile_data):
+    response = api.payment_profiles.verify(payment_profile_data['id'])
+    assert response.status_code == status.HTTP_201_CREATED
+    assert 'transaction' in response.body
+
+
+@vcr.use_cassette()
+def test_payment_profiles_destroy(api, payment_profile_data):
+    response = api.payment_profiles.destroy(payment_profile_data['id'])
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['payment_profile']['id'] == payment_profile_data['id']
+    assert response.body['payment_profile']['status'] == 'inactive'

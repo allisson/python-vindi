@@ -73,3 +73,17 @@ def payment_method_data():
             'id': 17293
         }
     }
+
+
+@pytest.fixture
+def payment_profile_data():
+    return {
+        'id': 2284520,
+        'holder_name': 'John Doe',
+        'card_expiration': '12/2020',
+        'card_number': '5555555555555557',
+        'card_cvv': '123',
+        'payment_method_code': 'credit_card',
+        'payment_company_code': 'mastercard',
+        'customer_id': 2481258
+    }
