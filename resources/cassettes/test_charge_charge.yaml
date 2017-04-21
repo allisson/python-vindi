@@ -1,0 +1,34 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.13.0]
+    method: POST
+    uri: https://app.vindi.com.br/api/v1/charges/6810923/charge
+  response:
+    body: {string: "{\"charge\":{\"id\":6810923,\"amount\":\"100.0\",\"status\":\"paid\",\"due_at\":\"2017-04-24T23:59:59.000-03:00\",\"paid_at\":\"2017-04-21T12:06:47.000-03:00\",\"installments\":2,\"attempt_count\":1,\"next_attempt\":null,\"print_url\":null,\"created_at\":\"2017-04-21T11:12:04.000-03:00\",\"updated_at\":\"2017-04-21T12:06:47.000-03:00\",\"last_transaction\":{\"id\":10396048,\"transaction_type\":\"charge\",\"status\":\"success\",\"amount\":\"100.0\",\"installments\":2,\"gateway_message\":\"Transacao
+        aprovada\",\"gateway_response_code\":\"\",\"gateway_authorization\":\"D2186DDB040BE6B676D5D71E18840BFA\",\"gateway_transaction_id\":\"9f9d9350-25aa-4640-a086-e5fbce85eb65\",\"gateway_response_fields\":{\"test_auth\":\"5786a017cbdd8323c359\"},\"fraud_detector_score\":null,\"fraud_detector_status\":null,\"fraud_detector_id\":null,\"created_at\":\"2017-04-21T12:06:47.000-03:00\",\"gateway\":{\"id\":10371,\"connector\":\"test\"},\"payment_profile\":{\"id\":2284520,\"holder_name\":\"JOHN
+        DOE\",\"registry_code\":null,\"bank_branch\":null,\"bank_account\":null,\"card_expiration\":\"2020-12-31T23:59:59.000-02:00\",\"card_number_first_six\":\"555555\",\"card_number_last_four\":\"5557\",\"token\":\"ba3cf5f2-143f-44df-b09e-0bc69dfb7a96\",\"created_at\":\"2017-04-20T08:59:01.000-03:00\",\"payment_company\":{\"id\":1,\"name\":\"MasterCard\",\"code\":\"mastercard\"}}},\"payment_method\":{\"id\":17293,\"public_name\":\"Cart\xE3o
+        de cr\xE9dito\",\"name\":\"Cart\xE3o de cr\xE9dito\",\"code\":\"credit_card\",\"type\":\"PaymentMethod::CreditCard\"},\"bill\":{\"id\":7071972,\"code\":\"my-fourth-bill\"},\"customer\":{\"id\":2481258,\"name\":\"John
+        Doe\",\"email\":\"john@doe.com\",\"code\":null}}}"}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1507']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Fri, 21 Apr 2017 15:06:47 GMT']
+      ETag: [W/"df8bfecdd9105168d21db87fc27a26aa"]
+      Rate-Limit-Limit: ['120']
+      Rate-Limit-Remaining: ['119']
+      Rate-Limit-Reset: ['1492787267']
+      Server: [nginx]
+      Vindi-Merchant-Id: ['5963']
+      X-Request-Id: [c1e109fe-63aa-495a-b8ee-f3de4c06c4c0]
+      X-Runtime: ['0.173296']
+    status: {code: 201, message: Created}
+version: 1

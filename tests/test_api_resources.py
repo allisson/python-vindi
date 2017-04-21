@@ -177,9 +177,51 @@ def test_bill_update(api, bill_data):
 
 
 @vcr.use_cassette()
-def test_bill_destroy(api, bill_data):
+def test_bill_destroy(api):
     id = 7071692
     response = api.bills.destroy(id)
     assert response.status_code == status.HTTP_200_OK
     assert response.body['bill']['id'] == id
     assert response.body['bill']['status'] == 'canceled'
+
+
+@vcr.use_cassette()
+def test_charge_list(api):
+    response = api.charges.list()
+    assert response.status_code == status.HTTP_200_OK
+    assert 'charges' in response.body
+
+
+@vcr.use_cassette()
+def test_charge_retrieve(api, charge_data):
+    response = api.charges.retrieve(charge_data['id'])
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['charge']['id'] == charge_data['id']
+
+
+@vcr.use_cassette()
+def test_charge_update(api, charge_data):
+    body = {
+        'installments': 2
+    }
+    response = api.charges.update(charge_data['id'], body=body)
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['charge']['id'] == charge_data['id']
+    assert response.body['charge']['installments'] == body['installments']
+
+
+@vcr.use_cassette()
+def test_charge_destroy(api):
+    id = 6814889
+    response = api.charges.destroy(id)
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['charge']['id'] == id
+    assert response.body['charge']['status'] == 'canceled'
+
+
+@vcr.use_cassette()
+def test_charge_charge(api, charge_data):
+    response = api.charges.charge(charge_data['id'])
+    assert response.status_code == status.HTTP_201_CREATED
+    assert response.body['charge']['id'] == charge_data['id']
+    assert response.body['charge']['status'] == 'paid'

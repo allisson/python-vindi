@@ -105,3 +105,13 @@ def bill_data():
             'id': 2284520
         }
     }
+
+
+@pytest.fixture
+def charge_data():
+    return {
+        'id': 6810923,
+        'amount': '100.0',
+        'status': 'pending',
+        'due_at': '2017-04-24T23:59:59.000-03:00',
+    }

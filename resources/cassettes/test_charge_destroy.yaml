@@ -1,0 +1,32 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.13.0]
+    method: DELETE
+    uri: https://app.vindi.com.br/api/v1/charges/6814889
+  response:
+    body: {string: "{\"charge\":{\"id\":6814889,\"amount\":\"100.0\",\"status\":\"canceled\",\"due_at\":\"2017-04-24T23:59:59.000-03:00\",\"paid_at\":null,\"installments\":1,\"attempt_count\":0,\"next_attempt\":null,\"print_url\":null,\"created_at\":\"2017-04-21T12:11:49.000-03:00\",\"updated_at\":\"2017-04-21T12:13:44.521-03:00\",\"last_transaction\":null,\"payment_method\":{\"id\":17293,\"public_name\":\"Cart\xE3o
+        de cr\xE9dito\",\"name\":\"Cart\xE3o de cr\xE9dito\",\"code\":\"credit_card\",\"type\":\"PaymentMethod::CreditCard\"},\"bill\":{\"id\":7076080,\"code\":\"my-fifth-bill\"},\"customer\":{\"id\":2481258,\"name\":\"John
+        Doe\",\"email\":\"john@doe.com\",\"code\":null}}}"}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['579']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Fri, 21 Apr 2017 15:13:44 GMT']
+      ETag: [W/"0befc147fbde8e7eeee846985260c62e"]
+      Rate-Limit-Limit: ['120']
+      Rate-Limit-Remaining: ['118']
+      Rate-Limit-Reset: ['1492787646']
+      Server: [nginx]
+      Vindi-Merchant-Id: ['5963']
+      X-Request-Id: [df5eb926-265c-49d4-862d-b96328aa7112]
+      X-Runtime: ['0.050420']
+    status: {code: 200, message: OK}
+version: 1
