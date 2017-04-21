@@ -141,3 +141,45 @@ def test_payment_profiles_destroy(api, payment_profile_data):
     assert response.status_code == status.HTTP_200_OK
     assert response.body['payment_profile']['id'] == payment_profile_data['id']
     assert response.body['payment_profile']['status'] == 'inactive'
+
+
+@vcr.use_cassette()
+def test_bill_create(api, bill_data):
+    body = bill_data
+    response = api.bills.create(body=body)
+    assert response.status_code == status.HTTP_201_CREATED
+    assert response.body['bill']['id'] == bill_data['id']
+
+
+@vcr.use_cassette()
+def test_bill_list(api):
+    response = api.bills.list()
+    assert response.status_code == status.HTTP_200_OK
+    assert 'bills' in response.body
+
+
+@vcr.use_cassette()
+def test_bill_retrieve(api, bill_data):
+    response = api.bills.retrieve(bill_data['id'])
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['bill']['id'] == bill_data['id']
+
+
+@vcr.use_cassette()
+def test_bill_update(api, bill_data):
+    body = {
+        'code': 'first-bill'
+    }
+    response = api.bills.update(bill_data['id'], body=body)
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['bill']['id'] == bill_data['id']
+    assert response.body['bill']['code'] == body['code']
+
+
+@vcr.use_cassette()
+def test_bill_destroy(api, bill_data):
+    id = 7071692
+    response = api.bills.destroy(id)
+    assert response.status_code == status.HTTP_200_OK
+    assert response.body['bill']['id'] == id
+    assert response.body['bill']['status'] == 'canceled'

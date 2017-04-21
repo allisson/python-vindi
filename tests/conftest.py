@@ -87,3 +87,21 @@ def payment_profile_data():
         'payment_company_code': 'mastercard',
         'customer_id': 2481258
     }
+
+
+@pytest.fixture
+def bill_data():
+    return {
+        'id': 7064381,
+        'customer_id': 2481258,
+        'code': 'my-first-bill',
+        'installments': 1,
+        'payment_method_code': 'credit_card',
+        'bill_items': [{
+            'product_code': 'product-1',
+            'amount': 100.00
+        }],
+        'payment_profile': {
+            'id': 2284520
+        }
+    }

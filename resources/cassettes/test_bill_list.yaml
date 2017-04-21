@@ -1,0 +1,35 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.13.0]
+    method: GET
+    uri: https://app.vindi.com.br/api/v1/bills
+  response:
+    body: {string: "{\"bills\":[{\"id\":7064381,\"code\":\"my-first-bill\",\"amount\":\"100.0\",\"installments\":1,\"status\":\"pending\",\"seen_at\":null,\"billing_at\":null,\"due_at\":\"2017-04-24T23:59:59.000-03:00\",\"url\":\"https://app.vindi.com.br/customer/bills/7064381?token=db96ea6a-561f-44ab-a040-b0909c739564\",\"created_at\":\"2017-04-21T09:18:55.000-03:00\",\"updated_at\":\"2017-04-21T09:18:56.000-03:00\",\"bill_items\":[{\"id\":8362517,\"amount\":\"100.0\",\"quantity\":null,\"pricing_range_id\":null,\"description\":null,\"pricing_schema\":null,\"product\":{\"id\":82534,\"name\":\"Product
+        1\",\"code\":\"product-1\"},\"product_item\":null,\"discount\":null}],\"charges\":[{\"id\":6803582,\"amount\":\"100.0\",\"status\":\"pending\",\"due_at\":\"2017-04-24T23:59:59.000-03:00\",\"paid_at\":null,\"installments\":1,\"attempt_count\":0,\"next_attempt\":null,\"print_url\":null,\"created_at\":\"2017-04-21T09:18:56.000-03:00\",\"updated_at\":\"2017-04-21T09:18:56.000-03:00\",\"last_transaction\":null,\"payment_method\":{\"id\":17293,\"public_name\":\"Cart\xE3o
+        de cr\xE9dito\",\"name\":\"Cart\xE3o de cr\xE9dito\",\"code\":\"credit_card\",\"type\":\"PaymentMethod::CreditCard\"}}],\"customer\":{\"id\":2481258,\"name\":\"John
+        Doe\",\"email\":\"john@doe.com\",\"code\":null},\"period\":null,\"subscription\":null,\"metadata\":{},\"payment_profile\":{\"id\":2284520,\"holder_name\":\"JOHN
+        DOE\",\"registry_code\":null,\"bank_branch\":null,\"bank_account\":null,\"card_expiration\":\"2020-12-31T23:59:59.000-02:00\",\"card_number_first_six\":\"555555\",\"card_number_last_four\":\"5557\",\"token\":\"ba3cf5f2-143f-44df-b09e-0bc69dfb7a96\",\"created_at\":\"2017-04-20T08:59:01.000-03:00\",\"payment_company\":{\"id\":1,\"name\":\"MasterCard\",\"code\":\"mastercard\"}}}]}"}
+    headers:
+      Cache-Control: ['max-age=0, private, must-revalidate']
+      Connection: [keep-alive]
+      Content-Length: ['1564']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Fri, 21 Apr 2017 12:21:51 GMT']
+      ETag: [W/"bdd79778039b209ced3f464578a4a527"]
+      Per-Page: ['25']
+      Rate-Limit-Limit: ['120']
+      Rate-Limit-Remaining: ['119']
+      Rate-Limit-Reset: ['1492777371']
+      Server: [nginx]
+      Total: ['1']
+      Vindi-Merchant-Id: ['5963']
+      X-Request-Id: [5e28c6d7-9dd1-42ec-87e9-308a00a6ccc2]
+      X-Runtime: ['0.040105']
+    status: {code: 200, message: OK}
+version: 1
