@@ -4,7 +4,7 @@ from simple_rest_client.api import API
 from vindi import resource
 
 
-def get_api_instance(token='', timeout=3):
+def get_api_instance(token='', api_root_url=None, timeout=3):
     headers = {
         'Authorization': basic_http_auth(token, ''),
         'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ def get_api_instance(token='', timeout=3):
         'Authorization': basic_http_auth(token, ''),
         'Content-Type': 'multipart/form-data'
     }
-    api_root_url = 'https://app.vindi.com.br/api/v1/'
+    api_root_url = api_root_url or 'https://app.vindi.com.br/api/v1/'
     api = API(
         api_root_url=api_root_url, headers=headers, json_encode_body=True,
         timeout=timeout

@@ -47,6 +47,18 @@ Tutorial
     200
     >>> # fim \o/
 
+
+Usando o ambiente sandbox
+-------------------------
+
+.. code:: python
+    
+    >>> # import inicial
+    >>> from vindi.api import get_api_instance
+    >>> # criando uma nova instância da api
+    >>> api = get_api_instance(token='seu-token-da-vindi', api_root_url='https://sandbox-app.vindi.com.br/api/v1/')
+
+
 Verifique a documentação da `API Vindi`_.
 
 .. _`API Vindi`: https://vindi.github.io/api-docs/dist/
