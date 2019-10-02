@@ -1,8 +1,11 @@
 -r requirements.txt
+Sphinx
+black
+coveralls
+isort
+pre-commit
 pytest
 pytest-cov
-vcrpy
-coveralls
-Sphinx
 twine
+vcrpy
 wheel
