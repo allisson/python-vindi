@@ -2,6 +2,7 @@
 Sphinx
 black
 coveralls
+flake8
 isort
 pre-commit
 pytest
